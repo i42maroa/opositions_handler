@@ -1,1 +1,42 @@
-<p>table works!</p>
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="centro">
+    <th mat-header-cell *matHeaderCellDef> centro </th>
+    <td mat-cell *matCellDef="let element"> {{element.centro}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="fFinAus">
+    <th mat-header-cell *matHeaderCellDef> fFinAus </th>
+    <td mat-cell *matCellDef="let element"> {{element.fFinAus}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dProvincia">
+    <th mat-header-cell *matHeaderCellDef> dProvincia </th>
+    <td mat-cell *matCellDef="let element"> {{element.dProvincia}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="dMunicipio">
+    <th mat-header-cell *matHeaderCellDef> dMunicipio </th>
+    <td mat-cell *matCellDef="let element"> {{element.dMunicipio}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="dLocalidad">
+    <th mat-header-cell *matHeaderCellDef> dLocalidad </th>
+    <td mat-cell *matCellDef="let element"> {{element.dLocalidad}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="lVoluntaria">
+    <th mat-header-cell *matHeaderCellDef> lVoluntaria </th>
+    <td mat-cell *matCellDef="let element"> {{element.lVoluntaria}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="observaciones">
+    <th mat-header-cell *matHeaderCellDef> observaciones </th>
+    <td mat-cell *matCellDef="let element"> {{element.observaciones}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+
